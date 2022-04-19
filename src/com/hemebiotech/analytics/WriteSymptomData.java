@@ -11,16 +11,20 @@ public class WriteSymptomData implements ISymptomWriter {
 	@Override
 	public void writeSymptoms(Map<String, Long> finalList) throws Exception {
 		
-	    try {	      
-	      FileWriter myWriter = new FileWriter("results.txt");	      
+		
+		FileWriter myWriter = null;
+	    try {
+	      myWriter = new FileWriter("results.txt");
 	      for (Entry<String, Long> writeLine : finalList.entrySet()) {
 				myWriter.write(writeLine.getKey() + ": " + writeLine.getValue() + "\n");
-		}	     
-	      myWriter.close();
+	      }	          
 	    } 
 	    catch (IOException e) {
 	      System.out.println("An error occurred." +e);
 	    }
+	    finally {
+	    	myWriter.close();
+		}
 	}
 
 }
