@@ -1,23 +1,32 @@
 package com.hemebiotech.analytics;
 
+
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class AnalyticsCounter {
-
+/**
+ * count occurrences using a hashmap inside a loop,
+ * this specific class avoid symptoms duplication
+ * 
+ * @author jeremyb59@wanadoo.fr
+ */
+public class AnalyticsCounter implements ISymptomCounter {
 	
-	public void start() throws Exception {
+	@Override
+	public Map<String, Long> countSymptoms(List<String> bufferedList) throws Exception {
 		
-		ISymptomReader reader = new ReadSymptomDataFromFile("symptoms.txt");
-		List<String> sourceList = reader.getSymptoms();
 		
-		ISymptomCounter counter = new CountSymptomData();
-		Map<String, Long> countList = counter.countSymptoms(sourceList);
+		Map<String, Long> countList = new HashMap<>();
 		
-		ISymptomSorter sorter = new SortSymptomData();
-		Map<String, Long> sortList = sorter.sortSymptoms(countList);
-		
-		ISymptomWriter writer = new WriteSymptomData();
-		writer.writeSymptoms(sortList);
-	}
+		for (String symptomName : bufferedList) {
+		 
+			if (countList.containsKey(symptomName) ) { 
+		              countList.put(symptomName, countList.get(symptomName)+1);
+		    } else {
+			          countList.put(symptomName, 1L);
+		           }			
+		}
+        return countList;
+    }
 }

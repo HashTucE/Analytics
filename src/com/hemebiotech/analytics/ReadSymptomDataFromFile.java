@@ -6,44 +6,44 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
- * Simple brute force implementation
- *
+ * read each line of strings from a file locate to filepath
+ * 
+ * @author Hélène
  */
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
 	private String filepath;
-
 	/**
-	 * 
 	 * @param filepath a full or partial path to file with symptom strings in it,
-	 *                 one per line
+	 *        one per line
 	 */
 	public ReadSymptomDataFromFile(String filepath) {
 		this.filepath = filepath;
 	}
-
+	
 	@Override
-	public List<String> getSymptoms() {
-		ArrayList<String> result = new ArrayList<String>();
+	public List<String> getSymptoms() throws IOException {
+		ArrayList<String> bufferList = new ArrayList<String>();
 
+		BufferedReader reader = null;
 		if (filepath != null) {
 			try {
-				BufferedReader reader = new BufferedReader(new FileReader(filepath));
+				reader = new BufferedReader(new FileReader(filepath));
 				String line = reader.readLine();
 
 				while (line != null) {
-					result.add(line);
+					bufferList.add(line);
 					line = reader.readLine();
-				}
-				reader.close();
-			} catch (IOException e) {
-				      System.out.println("An error occurred." +e);
+				}	
+			}  
+			catch (IOException e) {
+				System.out.println("An error occurred." +e);
+			}
+			finally {
+	    	reader.close();
 			}
 		}
-
-		return result;
+		return bufferList;
 	}
-
 }

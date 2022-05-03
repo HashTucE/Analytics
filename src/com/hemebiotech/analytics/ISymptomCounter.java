@@ -7,17 +7,14 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Anything that will count occurrences from a list of symptoms without 
- * duplication
+ * anything that will count occurrences from a list without duplication
  * 
- *
+ * the implementation does not need to order the list
  */
 public interface ISymptomCounter {
 	/**
-	 * 
-	 * @param a list of String named sourceList
-	 * @return a map listing of keys (symptoms) and values (occurrences) 
-	 * 
+	 * @param a raw listing of all Symptoms obtained from a data source
+	 * @return an unordered listing of each Symptoms with their occurrences 
 	 */
-	Map<String, Long> countSymptoms(List<String> sourceList) throws Exception;
+	Map<String, Long> countSymptoms(List<String> bufferedList) throws Exception;
 }
