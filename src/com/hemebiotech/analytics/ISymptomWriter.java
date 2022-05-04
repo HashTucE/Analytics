@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.hemebiotech.analytics;
 
 import java.util.Map;
@@ -12,5 +9,5 @@ public interface ISymptomWriter {
 	/**
 	 * @param an alphabetical ordered listing of each symptoms with their occurrences
 	 */
-	void writeSymptoms(Map<String, Long> sortedList) throws Exception;
+	void writeSymptoms(Map<String, Long> sortList) throws Exception;
 }

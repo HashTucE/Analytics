@@ -14,12 +14,12 @@ import java.util.Map;
 public class AnalyticsCounter implements ISymptomCounter {
 	
 	@Override
-	public Map<String, Long> countSymptoms(List<String> bufferedList) throws Exception {
+	public Map<String, Long> countSymptoms(List<String> readList) throws Exception {
 		
 		
 		Map<String, Long> countList = new HashMap<>();
 		
-		for (String symptomName : bufferedList) {
+		for (String symptomName : readList) {
 		 
 			if (countList.containsKey(symptomName) ) { 
 		              countList.put(symptomName, countList.get(symptomName)+1);

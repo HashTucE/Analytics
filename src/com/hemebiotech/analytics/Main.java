@@ -16,17 +16,17 @@ public class Main {
 	 */
 	public static void main(String[] args) throws Exception {
 
-		ISymptomReader reader = new ReadSymptomDataFromFile("symptoms.txt");
-		List<String> bufferedList = reader.getSymptoms();
+		ISymptomReader reader = new ReadSymptomDataFromFile();
+		List<String> readList = reader.getSymptoms();
 		
 		ISymptomCounter counter = new AnalyticsCounter();
-		Map<String, Long> countedList = counter.countSymptoms(bufferedList);
+		Map<String, Long> countList = counter.countSymptoms(readList);
 		
 		ISymptomSorter sorter = new SortSymptomData();
-		Map<String, Long> sortedList = sorter.sortSymptoms(countedList);
+		Map<String, Long> sortList = sorter.sortSymptoms(countList);
 		
 		ISymptomWriter writer = new WriteSymptomData();
-		writer.writeSymptoms(sortedList);
+		writer.writeSymptoms(sortList);
 
 	}
 
