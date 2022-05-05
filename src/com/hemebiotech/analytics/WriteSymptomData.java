@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 /**
- * generate a text file from a map using an entryset
+ * generate a text file from a map to OUTPUTFILE
  * 
  * @author jeremyb59@wanadoo.fr
  */

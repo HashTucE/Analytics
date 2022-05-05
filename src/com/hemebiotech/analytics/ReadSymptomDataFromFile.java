@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * read each line of strings from a file locate to filepath
+ * read each line of strings from a file locate to INPUTFILE
  * 
  * @author Hélène
  */
