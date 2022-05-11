@@ -13,5 +13,5 @@ public interface ISymptomCounter {
 	 * @param a raw listing of all Symptoms obtained from a data source
 	 * @return an unordered listing of each Symptoms with their occurrences 
 	 */
-	Map<String, Long> countSymptoms(List<String> readList) throws Exception;
+	Map<String, Integer> countSymptoms(List<String> readList) throws Exception;
 }

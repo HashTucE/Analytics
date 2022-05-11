@@ -10,5 +10,5 @@ public interface ISymptomSorter {
 	 * @param an unordered listing of each symptoms with their occurrences
 	 * @return an alphabetical ordered listing of each symptoms with their occurrences
 	 */
-	Map<String, Long> sortSymptoms(Map<String, Long> countedList) throws Exception;
+	Map<String, Integer> sortSymptoms(Map<String, Integer> countedList) throws Exception;
 }

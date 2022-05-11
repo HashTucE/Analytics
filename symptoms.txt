@@ -84,6 +84,7 @@ fever
 dizziness
 arrhythmias
 rash
+Mal de tête
 rash
 fever
 dry mouth
@@ -98,3 +99,8 @@ anxiety
 anxiety
 cough
 blurred vision
+mal de tête
+mal de tête
+mal de tête
+mal de tête
+mal de tête

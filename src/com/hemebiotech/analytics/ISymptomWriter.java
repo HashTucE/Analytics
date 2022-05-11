@@ -9,5 +9,5 @@ public interface ISymptomWriter {
 	/**
 	 * @param an alphabetical ordered listing of each symptoms with their occurrences
 	 */
-	void writeSymptoms(Map<String, Long> sortList) throws Exception;
+	void writeSymptoms(Map<String, Integer> sortList) throws Exception;
 }

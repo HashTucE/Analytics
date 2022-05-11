@@ -15,13 +15,13 @@ public class WriteSymptomData implements ISymptomWriter {
 	private static String OUTPUTFILE = "results.out";
 
 	@Override
-	public void writeSymptoms(Map<String, Long> sortList) throws Exception {
+	public void writeSymptoms(Map<String, Integer> sortList) throws IOException {
 		
 		
 		FileWriter myWriter = null;
 	    try {
 	        myWriter = new FileWriter(OUTPUTFILE);
-	        for (Entry<String, Long> writeLine : sortList.entrySet()) {
+	        for (Entry<String, Integer> writeLine : sortList.entrySet()) {
 				 myWriter.write(writeLine.getKey() + ": " + writeLine.getValue() + "\n");
 	        }	          
 	    } 

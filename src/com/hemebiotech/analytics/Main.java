@@ -20,10 +20,10 @@ public class Main {
 		List<String> readList = reader.getSymptoms();
 		
 		ISymptomCounter counter = new AnalyticsCounter();
-		Map<String, Long> countList = counter.countSymptoms(readList);
+		Map<String, Integer> countList = counter.countSymptoms(readList);
 		
 		ISymptomSorter sorter = new SortSymptomData();
-		Map<String, Long> sortList = sorter.sortSymptoms(countList);
+		Map<String, Integer> sortList = sorter.sortSymptoms(countList);
 		
 		ISymptomWriter writer = new WriteSymptomData();
 		writer.writeSymptoms(sortList);

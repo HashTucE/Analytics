@@ -11,9 +11,9 @@ import java.util.TreeMap;
 public class SortSymptomData implements ISymptomSorter {
 	
 	@Override
-	public Map<String, Long> sortSymptoms(Map<String, Long> countList) throws Exception {
+	public Map<String, Integer> sortSymptoms(Map<String, Integer> countList) throws Exception {
 		
-		Map<String, Long> sortList = new TreeMap<String, Long>(countList);
+		Map<String, Integer> sortList = new TreeMap<String, Integer>(countList);
 		
 		return sortList;
 	}
