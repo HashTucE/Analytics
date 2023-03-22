@@ -14,5 +14,12 @@ Take as input a list of symptoms in the form of a text file named `symptoms.txt`
 
 # Solution
 
-The program is mainly composed by 4 interfaces and 4 classes that implement them. 
-Each interface declares a method which represents a distinct step to pass from an input list to another output list : `reader`, `counter`, `sorter` and `writer`.
+- The program is mainly composed by 4 interfaces and 4 classes that implement them. 
+- Each interface declares a method which represents a distinct step to pass from an input list to another output list : `reader`, `counter`, `sorter` and `writer`.
+- Finally, the class that contains the `main` method is used to execute the program by performing the necessary operations.
+
+# Lauch Analytics
+
+1. Simply clone this project on your local machine.
+2. Open it with your favourite IDE.
+3. Run the `Main` class to generate a new `results.out`.
