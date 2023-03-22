@@ -20,6 +20,6 @@ Take as input a list of symptoms in the form of a text file named `symptoms.txt`
 
 # Lauch Analytics
 
-1. Simply clone this project on your local machine.
-2. Open it with your favourite IDE.
+1. Simply `clone` this project on your local machine.
+2. Open it with your favourite IDE using JDK `Java 11`.
 3. Run the `Main` class to generate a new `results.out`.
